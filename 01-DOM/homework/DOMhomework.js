@@ -7,7 +7,7 @@ let toDoItems = [];
 // agregar tu nombre al final del texto actual. Ej: 'Aplicación creada por Franco'
 // Tu código acá:
 let createdBy = document.querySelector('#createdBy');
-createdBy.innerHTML = createdBy.innerHTML + ' Lucas Beckford';
+createdBy.innerHTML = createdBy.innerHTML + ' Maximiliano Alonso';
 
 // Lo de arriba seria igual a esto:
 //document.querySelector('#createdBy').innerHTML = document.querySelector('#createdBy').innerHTML + ' Lucas Beckford'
