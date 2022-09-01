@@ -1,1 +1,18 @@
 // Mixins acá
+.navbar-style {
+  background-color: @nav-bg;
+  color: @nav-font;
+  border-bottom: 1px solid @nav-border;
+}
+
+.flex(@direction, @justify) {
+  display: flex;
+  flex-direction: @direction;
+  justify-content: @justify;
+}
+
+.button(@main-color, @font-color) {
+  background-color: @main-color;
+  color: @font-color;
+  border: 1px solid @font-color;
+}

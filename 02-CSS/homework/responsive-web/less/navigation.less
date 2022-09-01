@@ -1,1 +1,30 @@
 // Código de Nav acá
+.navbar {
+  .navbar-style();
+  .flex(column, space-evenly);
+  text-align: center;
+  padding: 0.6% 30%;
+
+  h2 {
+    margin: 0.3em;
+  }
+
+  .list {
+    .flex(row, space-around);
+
+    li {
+      font-size: 1.2em;
+      line-height: 2em;
+    }
+  }
+
+  @media @phone {
+    padding: 0.6% 1%;
+
+    .list {
+      li {
+        font-size: 1em;
+      }
+    }
+  }
+}

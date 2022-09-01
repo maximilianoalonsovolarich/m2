@@ -25,11 +25,11 @@
 var p = 'sadsa'
 
 var obj = {
-    // __proto__
-    propiedad: 1, // atajo para propiedad:propiedad
-    // Methods
-    // Computed (dynamic) property names
-    [ 'prop_' + p  ]: 42
+  // __proto__
+  propiedad: 1, // atajo para propiedad:propiedad
+  // Methods
+  // Computed (dynamic) property names
+  ['prop_' + p]: 42
 };
 
 `In JavaScript '\n' is a line-feed.`
@@ -39,10 +39,10 @@ var obj = {
 var name = "Bob", time = "today";
 
 // console.dir("Hello ${name}, how are you ${time}?")
-function hola(){
-	return  [ [1,2,3] , 4 ];
+function hola() {
+  return [[1, 2, 3], 4];
 }
-var [arr, len] = hola() 
+var [arr, len] = hola()
 
 // console.log(arr, len);
 
@@ -103,9 +103,9 @@ var [arr, len] = hola()
 // }
 
 
-function* idMaker(){
+function* idMaker() {
   var index = 0;
-  while(index < 5)
+  while (index < 5)
     yield index++;
   return 'gen';
 }
@@ -113,33 +113,33 @@ function* idMaker(){
 var gen = idMaker();
 
 
-for(i of gen){
-	console.log(i)
+for (i of gen) {
+  console.log(i)
 }
 
-function arrayWithLet(){
+function arrayWithLet() {
   let arreglo = [];
- //cambiar let por var y descomentar el console.log anterior al return
- // y observar el resultado
-  for ( let j= 0; j < 3; j++){
+  //cambiar let por var y descomentar el console.log anterior al return
+  // y observar el resultado
+  for (let j = 0; j < 3; j++) {
     arreglo.push(
-      function(){
+      function () {
         console.log(j);
       }
     )
   }
- 
- //console.log("J después del for ",j)
-return arreglo;
+
+  //console.log("J después del for ",j)
+  return arreglo;
 }
- 
+
 var array = arrayWithLet();
 //Si en lugar de let se usa var en el for,
 // el valor que imprimiría siempre sería el último tomado por el índice
 //En nuestro ejemplo: el 3
-array[0]() 
-array[1]() 
-array[2]() 
+array[0]()
+array[1]()
+array[2]()
 
 // // Sets
 // var s = new Set();

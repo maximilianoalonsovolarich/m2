@@ -1,17 +1,19 @@
 // Conteindo del Home
 
 .home {
-
   .intro {
+    .header-img {
+      border-radius: 20px;
+      margin-top: 1%;
+    }
 
     h2 {
       padding: 15px;
     }
 
     p {
-      padding:0 15px;
+      padding: 0 15px;
     }
-
   }
 
   .music-images {
@@ -58,6 +60,16 @@
       }
 
       .btn {
+        .button(@header-font-color, @main-border-color);
+        padding: 4%;
+        font-size: 1.6em;
+        text-align: center;
+        border-radius: 10px;
+        width: fit-content;
+        &:hover {
+          cursor: pointer;
+          .button(@main-border-color, @header-font-color);
+        }
       }
     }
 
@@ -69,6 +81,45 @@
         width: 100%;
         height: auto;
         border-radius: 10px;
+      }
+    }
+  }
+
+  @media @phone {
+    .intro {
+      .header-img {
+        width: 95vw;
+        margin: 1%;
+      }
+    }
+
+    .music-images {
+      .tecnologia,
+      .ondas {
+        display: none;
+      }
+
+      .auricular {
+        width: 100%;
+      }
+    }
+
+    .actual {
+      flex-direction: column-reverse;
+      padding: 0 15px;
+
+      .actual-img {
+        width: 100%;
+        margin: 2% 0;
+      }
+
+      .actual-text {
+        width: 100%;
+        margin: 10px 0;
+
+        .btn {
+          width: 100%;
+        }
       }
     }
   }
